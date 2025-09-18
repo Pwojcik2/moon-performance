@@ -1,7 +1,6 @@
-import React from 'react';
 import '../styles/Hero.css';
 
-const Hero: React.FC = () => {
+function Hero() {
   return (
     <section className="hero">
       <div className="hero-overlay"></div>
