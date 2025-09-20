@@ -1,0 +1,173 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+/* CSS Reset */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Font Classes */
+.font-racing {
+  font-family: 'Rajdhani', 'Orbitron', monospace;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Retro Racing/Tuning Culture Design System
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Purple/Blue neon theme matching the uploaded image */
+    --background: 220 30% 4%;
+    --foreground: 270 20% 95%;
+
+    --card: 230 25% 8%;
+    --card-foreground: 270 20% 95%;
+
+    --popover: 230 25% 8%;
+    --popover-foreground: 270 20% 95%;
+
+    /* Purple primary - matching image neon */
+    --primary: 270 90% 65%;
+    --primary-foreground: 220 30% 4%;
+
+    /* Deep blue secondary */
+    --secondary: 240 85% 45%;
+    --secondary-foreground: 270 20% 95%;
+
+    --muted: 240 20% 15%;
+    --muted-foreground: 270 15% 70%;
+
+    /* Pink accent */
+    --accent: 320 85% 70%;
+    --accent-foreground: 220 30% 4%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 270 20% 95%;
+
+    --border: 240 20% 18%;
+    --input: 240 20% 18%;
+    --ring: 270 90% 65%;
+
+    --radius: 0.75rem;
+
+    /* Neon colors matching the uploaded image */
+    --neon-blue: 210 100% 60%;     /* Blue accent from image */
+    --neon-purple: 270 90% 65%;    /* Main purple neon */
+    --neon-pink: 320 85% 70%;      /* Pink highlight */
+    --neon-cyan: 180 100% 50%;     /* Cyan details */
+    --neon-orange: 25 95% 53%;     /* Warm accent */
+    --neon-red: 0 84% 60%;         /* Red accent */
+    --racing-dark: 220 40% 3%;     /* Deep background */
+    --racing-gray: 240 25% 12%;    /* Mid-tone gray */
+    
+    /* Purple/Blue gradients matching image atmosphere */
+    --gradient-racing: linear-gradient(135deg, hsl(var(--neon-purple)) 0%, hsl(var(--neon-blue)) 100%);
+    --gradient-neon: linear-gradient(45deg, hsl(var(--neon-purple)), hsl(var(--neon-pink)), hsl(var(--neon-cyan)));
+    --gradient-dark: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--racing-gray)) 100%);
+    
+    /* Enhanced glow effects matching image */
+    --shadow-neon: 0 0 25px hsl(var(--neon-purple) / 0.6);
+    --shadow-racing: 0 10px 40px -5px hsl(0 0% 0% / 0.8);
+    --glow-blue: 0 0 50px hsl(var(--neon-blue) / 0.5);
+    --glow-purple: 0 0 50px hsl(var(--neon-purple) / 0.5);
+    --glow-pink: 0 0 30px hsl(var(--neon-pink) / 0.4);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Light mode variant - keeping same dark theme for consistency */
+  .light {
+    --background: 220 13% 8%;
+    --foreground: 210 40% 98%;
+    --card: 220 13% 10%;
+    --card-foreground: 210 40% 98%;
+    --popover: 220 13% 10%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 180 100% 45%;
+    --primary-foreground: 220 13% 8%;
+    --secondary: 185 95% 35%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 220 13% 15%;
+    --muted-foreground: 217 10% 64%;
+    --accent: 175 100% 60%;
+    --accent-foreground: 220 13% 8%;
+    --destructive: 175 100% 60%;
+    --destructive-foreground: 220 13% 8%;
+    --border: 220 13% 18%;
+    --input: 220 13% 15%;
+    --ring: 180 100% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    background-image: radial-gradient(circle at 20% 80%, hsl(var(--neon-blue) / 0.08) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 20%, hsl(var(--neon-red) / 0.08) 0%, transparent 50%);
+  }
+  
+  /* Racing-inspired custom classes */
+  .racing-grid {
+    background-image: 
+      linear-gradient(rgba(0, 225, 225, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 225, 225, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  .neon-glow {
+    box-shadow: var(--glow-blue);
+  }
+  
+  .neon-text {
+    text-shadow: 0 0 10px hsl(var(--neon-blue) / 0.8);
+  }
+  
+  .racing-border {
+    border: 2px solid transparent;
+    background: linear-gradient(var(--background), var(--background)) padding-box,
+                var(--gradient-racing) border-box;
+  }
+}
+
+@import "./styles/Navbar.css";
+@import "./styles/Hero.css";
+
+
