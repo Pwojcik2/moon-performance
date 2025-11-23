@@ -1,3 +1,5 @@
+@import "./styles/Navbar.css";
+@import "./styles/Hero.css";
 /* Google Fonts Import */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
@@ -8,6 +10,7 @@ html, body, #root {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  background-color: #0a0a0a;
 }
 
 #root {
@@ -166,8 +169,3 @@ All colors MUST be HSL.
                 var(--gradient-racing) border-box;
   }
 }
-
-@import "./styles/Navbar.css";
-@import "./styles/Hero.css";
-
-

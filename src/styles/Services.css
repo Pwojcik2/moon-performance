@@ -75,11 +75,11 @@
   .services-section {
     padding: 3rem 1rem;
   }
-  
+
   .section-title {
     font-size: 2rem;
   }
-  
+
   .services-grid {
     grid-template-columns: 1fr;
     padding: 0;

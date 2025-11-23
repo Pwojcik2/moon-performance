@@ -5,19 +5,19 @@ function ClientBuilds() {
     {
       title: 'Stage 1 Builds',
       description: 'Entry-level performance upgrades including intake, exhaust, and ECU tuning',
-      image: '/images/stage1.jpg',
+      image: '/images/moon1.jpg',
       alt: 'Stage 1 Evo Build'
     },
     {
       title: 'Stage 2 Builds',
       description: 'Enhanced performance with turbo upgrades, fuel system improvements, and more',
-      image: '/images/stage2.jpg',
+      image: '/images/moon2.jpg',
       alt: 'Stage 2 Evo Build'
     },
     {
       title: 'Stage 3 Builds',
       description: 'Full race builds with built engines, big turbos, and custom tuning',
-      image: '/images/stage3.jpg',
+      image: '/images/moon3.jpg',
       alt: 'Stage 3 Evo Build'
     }
   ];

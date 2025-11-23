@@ -1,18 +1,26 @@
-
+import React from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
 import ClientBuilds from '../components/ClientBuilds';
+import ClientReviews from '../components/ClientReviews';
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 
-function App() {
+const LandingPage: React.FC = () => {
   return (
-    <div>
+    <div className="app">
       <Navbar />
-      <Hero />
-      <Services />
-      <ClientBuilds />
+      <main>
+        <Hero />
+        <Services />
+        <ClientBuilds />
+        <ClientReviews />
+        <Contact />
+      </main>
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default LandingPage;
